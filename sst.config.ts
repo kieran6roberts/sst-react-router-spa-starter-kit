@@ -4,7 +4,7 @@ export default $config({
   app(input) {
     return {
       // The name of your app
-      name: "sst-static-site-react-router-starter-kit",
+      name: "sst-react-router-spa-starter-kit",
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "aws",

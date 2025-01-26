@@ -1,5 +1,5 @@
 {
-  "name": "sst-static-site-react-router-starter-kit",
+  "name": "sst-react-router-spa-starter-kit",
   "version": "0.0.0",
   "workspaces": [
     "packages/*"
