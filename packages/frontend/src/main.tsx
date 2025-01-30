@@ -7,7 +7,8 @@ import Create from '~/routes/create';
 import { Layout } from '~/shared/layouts/Layout';
 import '~/styles/app.css';
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+// @ts-expect-error - Argument of type 'HTMLElement | null' is not assignable to parameter of type 'Container'
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>

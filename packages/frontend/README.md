@@ -37,6 +37,28 @@ Create and preview a prod build:
 pnpm build && pnpm preview
 ```
 
+## Linting
+
+To lint the codebase, run the following command:
+
+```bash
+pnpm lint
+```
+
+To format code using Prettier, run the following command:
+
+```bash
+pnpm prettier:fix
+```
+
+## Type Checking
+
+To type check the codebase, run the following command:
+
+```bash
+pnpm type-check
+```
+
 ## Styling
 
 This template comes with the brand new [Tailwind CSS v4](https://tailwindcss.com/) installed. Setup using the `@tailwindcss/vite` plugin in `vite.config.ts` and the `src/styles/app.css` file. If you want to use a different styling method, those are files to update.
