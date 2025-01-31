@@ -1,10 +1,18 @@
 # This is still a work in progress. More to come.
 
-## sst-static-site-react-router-starter-kit
+## sst-react-router-spa-starter-kit
 
-A starter kit for creating a React Router v7 framework based React app with SST v3. The kit is defined as single page client side  app but it can be adapted to suit your requirements. With a few commands you can deploy the site to AWS using CloudFront and S3. Finally the kit comes with TypeScript for type-checking and TailwindCSS V4 for styling.
+A starter kit for creating a React Router v7 based React app with SST v3. We are using React Router simply as a routing library,
+and not as a framework as is now possible. The kit is defined as single page client side app. With a few commands you can deploy the site to AWS using CloudFront, S3, Route 53. It also comes with TypeScript for type-checking and the new TailwindCSS V4 for styling. Finally there is linting with ESLint and Prettier formatting.
 
-A template to create a monorepo SST v3 project. [Learn more](https://sst.dev/docs/set-up-a-monorepo).
+## Details
+
+- React Router v7 as a library: https://reactrouter.com/start/library/installation
+- SST v3: https://sst.dev/
+- TypeScript: https://www.typescriptlang.org/
+- TailwindCSS V4: https://tailwindcss.com/
+- ESLint: https://eslint.org/
+- Prettier: https://prettier.io/
 
 ## Getting Started
 
@@ -22,7 +30,7 @@ This starter kit uses a monorepo approach.
    pnpm i
    ```
 
-3. You'll notice some type complaints initially, to get rid of those initialize sst.
+3. You'll notice some type complaints initially relating to SST, to get rid of those initialize sst.
 
    ```bash
    pnpm sst install
@@ -46,12 +54,14 @@ This starter kit uses a monorepo approach.
    pnpm dev
    ```
 
+   You can find more instructions on the frontend package in the `packages/frontend/README.md` file.
+
 
 ## Infrastructure
 
-The `infra/` directory contains a `web.ts` file which I have set up to deploy the 1 page React app with SST v3. SST handles provisioning the necessary AWS resources. I recommend reading the [SST docs](https://sst.dev/docs/set-up-a-monorepo) for more information.
+The `infra/` directory contains a `web.ts` file which I have set up to deploy the 1 page React app with SST v3. SST handles provisioning the necessary resources, AWS in this case but you are free to adapt if you want to deploy elsehwere. I recommend reading the [SST docs](https://sst.dev/docs/) for more information.
 
-This is where you can add you domain after you've set this up in AWS Route 53. If you already have your own domain, check this [AWS guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html) to migrate your domain to Route 53.
+If you choose to use AWS as your infra and you already have your own domain registered outside of Route 53, check this [AWS guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/migrate-dns-domain-in-use.html) to migrate.
 
 If your app grows to use storage or API's, you can define those in the `infra/` directory. They would then be run from `sst.config.ts`.
 
