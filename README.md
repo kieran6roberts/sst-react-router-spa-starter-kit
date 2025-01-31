@@ -78,5 +78,34 @@ If your app grows to use storage or API's, you can define those in the `infra/` 
 
 ## AWS Associated Costs
 
-More to come...
+The starter kit is set up to deploy using AWS services. Here is some pricing info if you decide to deploy this way:
+
+### CloudFront
+
+Pay for what you use and part of the AWS free tier.
+
+You can read more about CloudFront pricing here: https://aws.amazon.com/cloudfront/pricing/
+
+### S3
+
+Pay as you goand part of the AWS free tier.
+
+You can read more about S3 pricing here: https://aws.amazon.com/s3/pricing/
+
+### Route 53
+
+$0.50 per hosted zone per month for the first 25 hosted zones. You would need 1 hosted zone for this app.
+
+Pricing: https://aws.amazon.com/route53/pricing/
+
+### Additional Costs
+
+If you decide to setup up autodeployments using SST Autodeploy, you may incur some additional costs. 
+Autodeploy uses AWS CodeBuild which runs on pay-as-you-go pricing with free tier on certain instance types. More
+information here: https://aws.amazon.com/codebuild/pricing/
+
+
+Autodeploy: https://sst.dev/docs/console#autodeploy
+
+
 
