@@ -2,15 +2,12 @@ import { Link } from 'react-router';
 
 export function Navbar() {
   return (
-    <div className="flex justify-between items-center px-4 py-6 bg-zinc-900 text-white">
-      <h1>SST - Client RR</h1>
+    <div className="flex justify-between items-center px-12 py-6 text-zinc-900 border-b border-zinc-100">
+      <Link to="/">
+        <h1>sst-react-router-spa-starter-kit</h1>
+      </Link>
       <div className="flex gap-6">
-        <Link to="/" viewTransition>
-          Home
-        </Link>
-        <Link to="/create" viewTransition>
-          Create
-        </Link>
+        <Link to="/create">Create</Link>
       </div>
     </div>
   );
